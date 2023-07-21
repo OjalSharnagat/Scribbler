@@ -1,0 +1,67 @@
+html {
+    background-color: #ffeedd;
+}
+
+.cardsLayout {
+    margin: 20px 24px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px 24px 40px;
+}
+
+.postCard, .centered-card {
+    display: flex;
+    height: auto;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+}
+
+.centered-card {
+    margin: 0 auto;
+}
+
+.postCard-left {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.postCard-left p {
+    font-size: 14px;
+    color: #818589;
+    font-weight: 700;
+    padding: 0 10px;
+}
+.postCard-right {
+    padding: 12px 12px 7px 13px;
+    background-color: #E5E4E2;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.card-para{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.card-title p{
+    font-size: 15px;
+    color: gray;
+}
+.card-ellipsis {
+    cursor: pointer;
+    display: flex;
+    justify-content:right ;
+}

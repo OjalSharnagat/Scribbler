@@ -1,95 +1,157 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriBBler</title>
+    <style>
+      html {
+          background: url(../images/background.jpg) no-repeat center center fixed;
+          background-size: cover;
+          height: 100%;
+          overflow: hidden;
+      }
+    </style>
+    <link rel="stylesheet" href="styles/index.css" />
+    <!-- TODO: Include Font Awesome file here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- TODO: Include Google Fonts file here -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <link rel="stylesheet" href="styles/index.css" />
-  <!-- TODO: Include Font Awesome file here -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- TODO: Include Google Fonts file here -->
-  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Ubuntu+Mono&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <!-- TODO: Include all your code for the header and home page here -->
+    <header class="header-container">
+      <div class="navbar">
+        <h1>ScriBBler</h1>
+        <span class="sub-heading">Explore, Imagine, Create</span>
+      </div>
+      <div>
+        <button id="signUpBtn">Sign Up</button>
+        <button id="signInBtn">Sign in</button>
+      </div>
+    </header>
 
-<body>
-  <!-- TODO: Include all your code for the header and home page here -->
-  <header class="header-container">
-    <div class="navbar">
-      <h1>ScriBBler</h1>
-      <span class="sub-heading">Explore, Imagine, Create</span>
+    <div id="homeLayout" class="home-layout">
+      <div class="post-btn">
+        <a href="/html/postslist.html"><button>All Posts</button></a>
+        <button id="createPostBtn">Create Post</button>
+      </div>
     </div>
-    <div>
-      <button id="signUpBtn">Sign Up</button>
-      <button id="signInBtn">Sign in</button>
-    </div>
-  </header>
 
-  <!--SignUp Modal box-->
-  <div id="signUpModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-box">
+    <!-- Create Post-->
+    <div id="createPost" class="createPostModal">
+      <div class="createPostContent">
         <div class="modal-top">
-          <span style="color: grey">Get Started</span>
-          <span class="closeModal"><i class="fa-solid fa-xmark" style="color: grey"></i></span>
+          <span style="color: grey; font-weight: 600">Pen Your Post</span>
+          <span class="closeModal"
+            ><i class="fa-solid fa-xmark" style="color: grey"></i
+          ></span>
         </div>
 
         <hr />
-
-        <form class="modal-form">
-          <label>Name</label>
-          <input type="text" placeholder="Enter your name" required />
-          <label>Username</label>
-          <input type="text" placeholder="Enter your username" required />
-          <label>Password</label>
-          <input type="password" placeholder="Enter your password" minlength="6" maxlength="18" required />
-          <label>Confirm Password</label>
-          <input type="password" placeholder="Re-enter your password" minlength="6" maxlength="18" required />
-          <button>Sign Up</button>
+        <form class="createPostForm">
+          <label>Title</label>
+          <input type="text" placeholder="Enter title of your post" />
+          <label>Contents</label>
+          <textarea placeholder="Enter the contents of your post"></textarea>
+          <div class="createBtn">
+            <button>Create</button>
+          </div>
         </form>
       </div>
     </div>
-  </div>
-  <!--SignUp Modal box ends here-->
 
-  <!--SignIn Modal-->
-  <div id="signInModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-box">
-        <div class="modal-top">
-          <span style="color: grey">Get Started</span>
-          <span class="closeModal"><i class="fa-solid fa-xmark" style="color: grey"></i></span>
+    <!--SignUp Modal box-->
+    <div id="signUpModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-box">
+          <div class="modal-top">
+            <span style="color: grey; font-weight: 600;">Get Started</span>
+            <span class="closeModal"
+              ><i class="fa-solid fa-xmark" style="color: grey"></i
+            ></span>
+          </div>
+
+          <hr />
+
+          <form class="modal-form">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" required />
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username" required />
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              minlength="6"
+              maxlength="18"
+              required
+            />
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Re-enter your password"
+              minlength="6"
+              maxlength="18"
+              required
+            />
+            <button>Sign Up</button>
+          </form>
         </div>
-
-        <hr />
-
-        <form class="modal-form">
-          
-          <label>Username</label>
-          <input type="text" placeholder="Enter your username" required />
-          <label>Password</label>
-          <input type="password" placeholder="Enter your password" minlength="6" maxlength="18" required />
-          
-          <button>Sign Up</button>
-        </form>
       </div>
     </div>
-  </div>
-  <!--SignIn Modal ends here-->
+    <!--SignUp Modal box ends here-->
 
+    <!--SignIn Modal-->
+    <div id="signInModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-box">
+          <div class="modal-top">
+            <span style="color: grey; font-weight: 600;">Get Started</span>
+            <span class="closeModal"
+              ><i class="fa-solid fa-xmark" style="color: grey"></i
+            ></span>
+          </div>
 
-  <div class="home-layout">
-    <div class="post-btn">
-      <button>All Posts</button>
-      <button>Create Post</button>
+          <hr />
+
+          <form class="modal-form">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username" required />
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              minlength="6"
+              maxlength="18"
+              required
+            />
+
+            <button>Sign Up</button>
+            <small>Not a member? <a>Sign Up</a></small>
+          </form>
+        </div>
+      </div>
     </div>
-   </div>
- 
+    <!--SignIn Modal ends here-->
 
-  
-
-</body>
-<script src="/scripts/index.js"></script>
+  </body>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/CreatePost.js"></script>
 </html>
