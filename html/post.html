@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScriBBler | View Post</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/post.css" />
+
+  <!-- TODO: Include Font Awesome file here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- TODO: Include Google Fonts file here -->
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header-container">
+    <div class="navbar">
+      <h1>ScriBBler</h1>
+      <span class="sub-heading">Explore, Imagine, Create</span>
+    </div>
+    <div>
+      <button id="signUpBtn">Sign Up</button>
+      <button id="signInBtn">Sign in</button>
+    </div>
+  </header>
+  <main>
+    <section class="post">
+      <div class="title">
+        <div id="title"></div>
+      </div>
+      <div class="author">
+        <div id="author" class="author-name"></div>
+        <button>Edit <i class="fa-solid fa-pen-to-square"></i></button>
+      </div>
+      <div class="paragraph">
+        <div id="para"></div>
+      </div>
+      <button class="like-btn"><i class="fa-solid fa-thumbs-up"></i> Like</button>
+      <div class="like-statement">Be the first one to like this!</div>
+      <div class="comment">
+        <textarea class="comment-box" placeholder="Leave a comment..."></textarea>
+        <button class="comment-btn">Comment</button>
+      </div>
+      <div class="comments-section" id="allComments">
+        <h5>All Comments</h5>
+        <div class="all-comments">
+          <p class="comment-text">Great Post!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/post.js"></script>
+
+</body>
+
+
+</html>

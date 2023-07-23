@@ -1,0 +1,86 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+.post {
+    width: 1200px;
+}
+.author {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 12px 0;
+}
+.author-name {
+    color:#3c75b9 ;
+}
+.author button{
+    padding: 5px 14px;
+    border: none;
+    color: white;
+    background-color: #E30B5C;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+.paragraph {
+    font-size: 13px;
+}
+.like-btn {
+    margin-top: 10px;
+    padding: 5px 14px;
+    border: none;
+    color: white;
+    background-color: #E30B5C;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.like-statement {
+    font-size: 11px;
+    margin-top: 10px;
+}
+.comment {
+    margin-top: 28px;
+    display: grid;
+}
+.comment-box {
+    width: 800px;
+    height: 50px;
+}
+.comment textarea::placeholder {
+    padding-left: 7px;
+}
+.comment-btn {
+    width: 90px;
+    margin-top: 10px;
+    padding: 5px 0;
+    border: none;
+    color: white;
+    background-color: #E30B5C;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.comments-section {
+    margin-top: 14px;
+}
+
+
+
+
+/* Style for the comments */
+.comment-text {
+    width: 785px;
+    margin: 10px 8px; 
+    font-size: 14px;
+    background-color: #fff;
+}
+.all-comments {
+   display: grid;
+   width: 800px;
+   background-color: #F3F3F3;
+}  
